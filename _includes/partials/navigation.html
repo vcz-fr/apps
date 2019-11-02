@@ -1,0 +1,10 @@
+<nav class="card links">
+    <h2 class="text-center">Menu</h2>
+    {% for item in site.data.navigation %}
+    <a {% if page.active == item.name %}class="active"{% endif %} href="{{item.url}}">
+        <span class="icon">{{item.icon}}</span> {{item.text}}
+    </a>
+    {% endfor %}
+    <hr>
+    <a href="https://vcz.fr" style=color:#809><span class="icon">▱</span> My website</a>
+</nav>

@@ -1,0 +1,127 @@
+---
+---
+
+@import "vars";
+@import "fonts";
+
+html {
+    background: $bg-color;
+}
+
+.icon {
+    display: inline-block;
+    font-family: icon;
+}
+
+body {
+    min-width: 48rem;
+    max-width: 1440px;
+    width: 80%;
+    margin: 0 auto;
+    overflow-y: scroll;
+    display: flex;
+    font-family: text, Helvetica;
+}
+
+h1, h2 {
+    margin: 0;
+}
+
+h1 {
+    font-weight: 400;
+}
+
+hr {
+    width: 80%;
+    color: $bg-color;
+    margin: 2rem auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+#menu {
+    width: 40%;
+    margin: 0 1rem;
+    max-width: 360px;
+}
+
+#content {
+    width: 60%;
+    margin: 0 1rem;
+    flex-grow: 1;
+}
+
+.card {
+    margin: 2rem 0;
+    background: $card-color;
+    padding: 1rem;
+    box-shadow: 5px 5px $card-accent;
+}
+
+.text-center, .icon {
+    text-align: center;
+}
+
+.links > a {
+    cursor: pointer;
+    display: block;
+    font-size: 1.3rem;
+    color: $text-color;
+
+    &.active {
+        font-weight: 700;
+        color: $text-accent;
+    }
+
+    & > .icon {
+        width: 2rem;
+    }
+}
+
+a, nav > a:hover, .purple {
+    color: $text-accent;
+}
+
+.md-hide {
+    display: none;
+}
+
+#portfolio .portfolio-item {
+    display: flex;
+
+    & > * {
+        width: 50%;
+        margin: 0 1rem;
+    }
+    
+    .portfolio-image {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+#menu {
+    .text-center:hover h1 {
+        color: rgba(0,0,0,.1);
+    }
+
+    :first-child:hover #logo {
+        transform: rotate(-15deg) scale(1.1);
+    }
+}
+
+#logo {
+    display: inline-block;
+    height: 72px;
+    width: 72px;
+    transition: all .1s;
+}
+
+@import "responsive";
