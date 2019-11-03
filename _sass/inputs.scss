@@ -1,0 +1,22 @@
+input,
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: .5rem;
+    margin: .5rem 0;
+}
+
+input[type="button"] {
+  background-color: transparent;
+  border: solid $card-accent 1px;
+  text-decoration: underline;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+
+  :read-only {
+    background-color: $bg-color;
+  }
+}

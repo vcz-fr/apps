@@ -16,5 +16,12 @@ const send = (action, body) => fetch(`https://api.vcz.fr/fowler/${action}`, {
 
 const main = action => e => (e.preventDefault(), fd = new FormData(_id("form")), send(action, {msg: fd.get("msg"), key: fd.get("key")}));
 
+// Actions
+
 _id("action-enc").addEventListener("click", main("enc"));
 _id("action-dec").addEventListener("click", main("dec"));
+
+_id("response").addEventListener("click", e => e.target.select());
+
+// Go!
+_id("readiness").innerText = "Ready!";
