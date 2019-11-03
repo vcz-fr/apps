@@ -1,0 +1,34 @@
+- name: index
+  url: /
+  text: Presentation
+  icon: 🚀
+
+- name: fowler
+  url: /fowler
+  text: Fowler
+  icon: 🖋️
+
+- name: feedback
+  url: "#"
+  text: Feedback (soon)
+  icon: 📢
+
+- name: anagram
+  url: "#"
+  text: Anagram (soon)
+  icon: 💡
+
+- name: unlink
+  url: "#"
+  text: Unlink (soon)
+  icon: 🔗
+
+- name: nsfw
+  url: "#"
+  text: NSFW proxy (soon)
+  icon: 🙈
+
+- name: wed
+  url: "#"
+  text: Write Every Day (soon)
+  icon: ⌨️

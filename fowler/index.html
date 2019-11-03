@@ -1,0 +1,44 @@
+---
+layout: default
+active: fowler
+---
+<div class="card">
+    <h2>Fowler</h2>
+
+    <h3>The need</h3>
+    <p>
+        Fowler is an encryption and decryption tool using Web cryptography technologies. Its usage of experimental technologies also implies that this tool will only work
+        on the latest browser versions and might stop working in the future whenever one of the experimental technologies gets deprecated.
+    </p>
+    <p>
+        It is not recommended using this tool for sensitive matters, even though an offline version will be presented soon.
+    </p>
+
+    <h3>Hot it works</h3>
+    <p>
+        To encrypt a message, input your encryption key and your text in the form below, then click on "Encrypt".
+        The key and the message will be sent to an environment that exists only during the time it takes to encrypt and return your message.
+        The encrypted message will be returned on the readonly box below. Clicking that box will automatically select the text for you.
+        Do not forget to send <b>both the key <u>and</u> the encrypted message</b> to your recipient. Separately, if possible.
+    </p>
+    <p>
+        To decrypt a message, input the encrypted text and the decryption key that have been sent to you by the sender, then click on "Decrypt".
+        The key and the encrypted message will be sent to an environment that exists only during the time it takes to decrypt and return your message.
+        The decrypted message will be returned on the readonly box below. Clicking that box will automatically select the text for you, even though this should not matter.
+    </p>
+</div>
+
+<div class="card">
+    <p>
+        Readiness: <span id="readiness">Not ready</span>
+    </p>
+    <form id="form" action="#">
+        <input type="text" name="key" placeholder="Encryption key" required/>
+        <textarea name="msg" placeholder="Type your message here" required></textarea>
+        <input name="action" type="submit" value="Encrypt"/>
+        <input name="action" type="submit" value="Decrypt"/>
+    </form>
+    <textarea id="response" placeholder="The response will be displayed here" readonly></textarea>
+</div>
+
+<script async defer src="app.js"></script>
