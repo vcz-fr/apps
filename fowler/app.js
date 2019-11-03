@@ -24,4 +24,4 @@ _id("action-dec").addEventListener("click", main("dec"));
 _id("response").addEventListener("click", e => e.target.select());
 
 // Go!
-_id("readiness").innerText = "Ready!";
+_id("readiness").classList.add("success");
