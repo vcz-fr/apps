@@ -3,17 +3,18 @@ const _v = id => (v = _id(id).value, _id(id).value === ""? null: value);
 const _r = msg => _id("response").value = msg;
 const _notif = msg => _r(`[INFO] An error has occurred: ${msg}`);
 
-const send = (action, fd) => fetch(`https://api.vcz.fr/fowler/${action}`, {
+const send = (action, body) => fetch(`https://api.vcz.fr/fowler/${action}`, {
     method: "POST",
-    body: fd,
+    body: JSON.stringify(body),
     headers: {
-        "content-type": "application/x-www-form-urlencoded"
+        "content-type": "application/json"
     }
 })
 .then(r => {if (r.ok){ return r.json() } throw "Could not process the inputs"})
-.then(v => _r(v.response))
+.then(_r)
 .catch(_notif);
 
-const main = (form, ev) => (ev.preventDefault(), fd = new FormData(form), action = fd.get("action") === "Encrypt"? "enc": "dec", send(action, fd))
+const main = action => e => (e.preventDefault(), fd = new FormData(_id("form")), send(action, {msg: fd.get("msg"), key: fd.get("key")}));
 
-_id("form").addEventListener("submit", main);
+_id("action-enc").addEventListener("click", main("enc"));
+_id("action-dec").addEventListener("click", main("dec"));
