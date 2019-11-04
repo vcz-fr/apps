@@ -10,6 +10,14 @@ input[type="button"] {
   background-color: transparent;
   border: solid $card-accent 1px;
   text-decoration: underline;
+
+  &:hover {
+    background-color: $card-color-light;
+  }
+
+  &:active {
+    background-color: $card-accent;
+  }
 }
 
 textarea {
