@@ -1,0 +1,55 @@
+---
+layout: default
+active: fowler
+---
+<div class="card">
+    <h2>Fowler</h2>
+
+    <h3>The need</h3>
+    <p>
+        <strong>Fowler</strong> is an encryption and decryption tool using Web cryptography technologies. Its usage of
+        experimental technologies also implies that this tool will only work
+        on the latest browser versions and might stop working in the future whenever one of the experimental
+        technologies gets deprecated.
+    </p>
+    <p>
+        It is not recommended using this tool for sensitive matters as this interface exchanges your texts with an
+        application I host online, i.e. you would need to trust me and my service provider. Not only that but it is
+        impossible to guarantee messages cannot be decrypted outside of the application.
+    </p>
+
+    <h3>Hot it works</h3>
+    <p>
+        To <b>encrypt a message</b>, input your encryption key and your text in the form below, then click on "Encrypt".
+        The key and the message will be sent to an environment that exists only during the time it takes to encrypt and
+        return your message.
+        The encrypted message will be returned on the readonly box below. Clicking that box will automatically select
+        the text for you.
+        Do not forget to send <b>both the key <u>and</u> the encrypted message</b> to your recipient. Separately, if
+        possible.
+    </p>
+    <p>
+        To <b>decrypt a message</b>, input the encrypted text and the decryption key that have been sent to you by the
+        sender, then click on "Decrypt".
+        The key and the encrypted message will be sent to an environment that exists only during the time it takes to
+        decrypt and return your message.
+        The decrypted message will be returned on the readonly box below. Clicking that box will automatically select
+        the text for you, even though this should not matter.
+    </p>
+</div>
+
+<div class="card">
+    <p>
+        App readiness: <span class="indicator" id="readiness"></span>
+    </p>
+    <form id="form" action="#">
+        <input type="text" name="key" placeholder="Encryption key" required>
+        <textarea name="msg" placeholder="Type your message here" required></textarea>
+        <input id="action-enc" type="button" value="Encrypt">
+        <input id="action-dec" type="button" value="Decrypt">
+    </form>
+    <hr>
+    <textarea id="response" placeholder="The response will be displayed here" readonly></textarea>
+</div>
+
+<script async defer src="online.js"></script>
