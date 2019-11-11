@@ -9,8 +9,8 @@
   icon: 🖋️
 
 - name: feedback
-  url: "#"
-  text: Feedback (soon)
+  url: /feedback
+  text: Feedback
   icon: 📢
 
 - name: anagram
