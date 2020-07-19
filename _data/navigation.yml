@@ -1,27 +1,27 @@
 - name: index
-  url: /
+  url:  /
   text: Presentation
   icon: 🚀
 
 - name: fowler
-  url: /fowler
+  url:  /fowler
   text: Fowler
   icon: 🖋️
 
 - name: feedback
-  url: /feedback
+  url:  /feedback
   text: Feedback
   icon: 📢
+
+- name: unlink
+  url:  /unlink
+  text: Unlink
+  icon: 🔗
 
 - name: anagram
   url: "#"
   text: Anagram (soon)
   icon: 💡
-
-- name: unlink
-  url: "#"
-  text: Unlink (soon)
-  icon: 🔗
 
 - name: nsfw
   url: "#"
