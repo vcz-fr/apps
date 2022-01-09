@@ -4,17 +4,17 @@
   icon: 🚀
 
 - name: fowler
-  url:  /fowler
+  url:  /app/fowler
   text: Fowler
   icon: 🖋️
 
 - name: feedback
-  url:  /feedback
+  url:  /app/feedback
   text: Feedback
   icon: 📢
 
 - name: unlink
-  url:  /unlink
+  url:  /app/unlink
   text: Unlink
   icon: 🔗
 
