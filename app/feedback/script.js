@@ -10,7 +10,7 @@ const send = body => {
         _block(false);
         return;
     }
-    fetch(`https://api.vcz.fr/feedback`, {
+    fetch(`/api/feedback`, {
         method: "POST",
         body: JSON.stringify(body),
         headers: {

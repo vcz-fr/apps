@@ -1,6 +1,6 @@
 # ▱ VCZ Apps
 
-Siplicity-powered tools!
+Simplicity-powered tools!
 
 ## The motivation
 I always have apps ideas and sometimes I am motivated to go through them and make an actual app. Some of them are adaptations of my PHP applications that have been taken down when I decided to leave my old server behind.
