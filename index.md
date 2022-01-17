@@ -18,8 +18,8 @@ extreme performance! How does it work? Like my [personal website](https://vcz.fr
 this site is hosted and delivered by [Cloudflare](https://www.cloudflare.com/){:rel="nofollow"}, and uses [Jekyll](https://jekyllrb.com/){:rel="nofollow"}
 to generate content! The difference is that it relies on [Cloudflare Workers](https://workers.cloudflare.com/){:rel="nofollow"}.
 
-If you like what you saw, do not forget to [leave some feedback](https://apps.vcz.fr/feedback/?appid=hS7YejNaDu6k) so
-that I can make the apps better.
+If you like what you saw, do not forget to [leave some feedback](https://apps.vcz.fr/app/feedback/?appid=hS7YejNaDu6k)
+so that I can make the apps better.
 
 Have a nice visit!
 

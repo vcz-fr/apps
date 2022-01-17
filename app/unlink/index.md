@@ -61,7 +61,7 @@ shortened URL.
 ## Your turn, now!
 
 You can contribute to these apps too! The best way to contribute is actually to leave some feedback. If you wish to
-leave feedback for this application, please click on [this link](https://apps.vcz.fr/feedback/?appid=jM85ke3GcMUb).
+leave feedback for this application, please click on [this link](https://apps.vcz.fr/app/feedback/?appid=jM85ke3GcMUb).
 Thank you for your support!
 
 {%- endcapture -%}

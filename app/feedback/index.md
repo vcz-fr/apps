@@ -45,7 +45,7 @@ If the process succeded a message should appear in the read-only box below.
 ## Your turn, now!
 
 You can contribute to these apps too! The best way to contribute is actually to leave some feedback. If you wish to
-leave feedback for this application, please click on [this link](https://apps.vcz.fr/feedback/?appid=crl4HX7hHtGc).
+leave feedback for this application, please click on [this link](https://apps.vcz.fr/app/feedback/?appid=crl4HX7hHtGc).
 Thank you for your support!
 
 {%- endcapture -%}
