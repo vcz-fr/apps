@@ -1,16 +1,4 @@
-const CORS_HEADERS = {
-    'Access-Control-Allow-Origin': '*',
-    'Access-Control-Allow-Methods': 'POST, OPTIONS',
-    'Access-Control-Max-Age': '7200'
-};
-
-const RESP_HEADERS = Object.assign({
-    'Content-Type': "application/json; charset=utf-8"
-}, CORS_HEADERS);
-
 const MAX_RECURSION = 20;
-
-export const onRequestOptions = async () => new Response(null, { status: 204, headers: CORS_HEADERS });
 
 export const onRequestPost: PagesFunction = async (ctx) => {
     const resp: any = {
@@ -20,7 +8,7 @@ export const onRequestPost: PagesFunction = async (ctx) => {
     let status = 200;
 
     if (ctx.request.headers.get("content-type") !== "application/json") {
-        return new Response(null, { status: 400, headers: CORS_HEADERS });
+        return new Response(null, { status: 400 });
     }
 
     const { url } = await ctx.request.json();
@@ -38,7 +26,7 @@ export const onRequestPost: PagesFunction = async (ctx) => {
 
     return new Response(JSON.stringify(resp), {
         status,
-        headers: RESP_HEADERS
+        headers: { 'Content-Type': "application/json; charset=utf-8" }
     });
 }
 

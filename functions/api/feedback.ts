@@ -1,9 +1,3 @@
-const CORS_HEADERS = {
-    'Access-Control-Allow-Origin': '*',
-    'Access-Control-Allow-Methods': 'POST, OPTIONS',
-    'Access-Control-Max-Age': '7200'
-};
-
 let CHANNELS: any;
 const ROOMS = {
     "wB5cWzWsLvjD": { channel: "meetups", username: "BBL: FaaS apps" },
@@ -14,8 +8,6 @@ const ROOMS = {
     "DW7RbJ8FWHm5": { channel: "content", username: "Blog" },
     "hS7YejNaDu6k": { channel: "content", username: "TheFollowUp" }
 };
-
-export const onRequestOptions = async () => new Response(null, { status: 204, headers: CORS_HEADERS });
 
 // Send a message to a discord channel through a webhook
 const sendDiscordMsg = async (appid: string, content: any) => {
@@ -40,7 +32,7 @@ const sendDiscordMsg = async (appid: string, content: any) => {
 // Retrieve the message contents and FWD to Discord!
 export const onRequestPost: PagesFunction = async (ctx) => {
     if (ctx.request.headers.get("content-type") !== "application/json") {
-        return new Response(null, { status: 400, headers: CORS_HEADERS });
+        return new Response(null, { status: 400 });
     }
 
     const { msg, appid } = await ctx.request.json();
@@ -50,8 +42,8 @@ export const onRequestPost: PagesFunction = async (ctx) => {
         try {
             await sendDiscordMsg(appid, msg);
         } catch (e) {
-            return new Response(null, { status: 400, headers: CORS_HEADERS });
+            return new Response(null, { status: 400 });
         }
-        return new Response(null, { status: 204, headers: CORS_HEADERS });
+        return new Response(null, { status: 204 });
     }
 }
