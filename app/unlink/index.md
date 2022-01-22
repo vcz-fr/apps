@@ -3,13 +3,10 @@ layout: default
 active: unlink
 ---
 
-<div class="card">
-{%- capture text -%}
+<div class="card" markdown="1">
 
 ## Unlink
 ### The need
-
-Hello, Vincenzo **Scalzi** here!
 
 **Unlink** is there for you when you need to find where a shortened link in pointing to without browsing it yourself. It
 will also provide you with a trace of the traversed URLs to reach the final destination and the HTTP status with every
@@ -40,8 +37,6 @@ If the resolution succeded a message should appear in the read-only box below. T
 their redirection status, from origin to destination. The last item should represent the final destination of the
 shortened URL.
 
-{%- endcapture -%}
-{{ text | markdownify }}
 </div>
 
 <div class="card">
@@ -56,16 +51,14 @@ shortened URL.
     <textarea id="response" placeholder="Response" readonly></textarea>
 </div>
 
-<div class="card">
-{%- capture text -%}
+<div class="card" markdown="1">
+
 ## Your turn, now!
 
 You can contribute to these apps too! The best way to contribute is actually to leave some feedback. If you wish to
 leave feedback for this application, please click on [this link](https://apps.vcz.fr/app/feedback/?appid=jM85ke3GcMUb).
 Thank you for your support!
 
-{%- endcapture -%}
-{{ text | markdownify }}
 </div>
 
 <script async defer src="script.js"></script>

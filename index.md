@@ -3,8 +3,7 @@ layout: default
 active: index
 ---
 
-<div class="card">
-{%- capture text -%}
+<div class="card" markdown="1">
 
 # Apps: simple yet powerful!
 
@@ -23,6 +22,4 @@ so that I can make the apps better.
 
 Have a nice visit!
 
-{%- endcapture -%}
-{{ text | markdownify }}
 </div>

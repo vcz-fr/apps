@@ -2,8 +2,7 @@
 layout: default
 active: fowler
 ---
-<div class="card">
-{%- capture text -%}
+<div class="card" markdown="1">
 
 ## Fowler
 ### The need
@@ -27,8 +26,6 @@ To **decrypt a message**, input the encrypted text and the decryption key that h
 click on "Decrypt". The key and the encrypted message locally decrypted. The message will be returned on the read-only
 box below. Clicking that box will automatically select the text for you, even though this should not matter.
 
-{%- endcapture -%}
-{{ text | markdownify }}
 </div>
 
 <div class="card">
@@ -42,16 +39,14 @@ box below. Clicking that box will automatically select the text for you, even th
     <textarea id="response" placeholder="The response will be displayed here" readonly></textarea>
 </div>
 
-<div class="card">
-{%- capture text -%}
+<div class="card" markdown="1">
+
 ## Your turn, now!
 
 You can contribute to these apps too! The best way to contribute is actually to leave some feedback. If you wish to
 leave feedback for this application, please click on [this link](https://apps.vcz.fr/app/feedback/?appid=b0GlOIPeLX00).
 Thank you for your support!
 
-{%- endcapture -%}
-{{ text | markdownify }}
 </div>
 
 <script async defer src="script.js"></script>

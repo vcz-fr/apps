@@ -2,8 +2,7 @@
 layout: default
 active: feedback
 ---
-<div class="card">
-{%- capture text -%}
+<div class="card" markdown="1">
 
 ## Feedback
 ### The need
@@ -23,8 +22,6 @@ read it.
 
 If the process succeded a message should appear in the read-only box below.
 
-{%- endcapture -%}
-{{ text | markdownify }}
 </div>
 
 <div class="card">
@@ -40,16 +37,14 @@ If the process succeded a message should appear in the read-only box below.
     <input id="response" placeholder="Response" readonly />
 </div>
 
-<div class="card">
-{%- capture text -%}
+<div class="card" markdown="1">
+
 ## Your turn, now!
 
 You can contribute to these apps too! The best way to contribute is actually to leave some feedback. If you wish to
 leave feedback for this application, please click on [this link](https://apps.vcz.fr/app/feedback/?appid=crl4HX7hHtGc).
 Thank you for your support!
 
-{%- endcapture -%}
-{{ text | markdownify }}
 </div>
 
 <script async defer src="script.js"></script>
