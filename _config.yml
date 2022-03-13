@@ -27,6 +27,7 @@ author:
     card: summary
   github: vcz-fr
 
+lsi: false
 markdown: kramdown
 kramdown:
   input: GFM

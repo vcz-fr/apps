@@ -19,8 +19,8 @@
   icon: 🔗
 
 - name: anagram
-  url: "#"
-  text: Anagram (soon)
+  url: /app/anagram
+  text: Anagram
   icon: 💡
 
 - name: nsfw

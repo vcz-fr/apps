@@ -5,6 +5,7 @@ const ROOMS = {
     "b0GlOIPeLX00": { channel: "apps", username: "Fowler" },
     "crl4HX7hHtGc": { channel: "apps", username: "Feedback" },
     "jM85ke3GcMUb": { channel: "apps", username: "Unlink" },
+    "pjlxtVSLuZ2x": { channel: "apps", username: "Anagram" },
     "DW7RbJ8FWHm5": { channel: "content", username: "Blog" },
     "hS7YejNaDu6k": { channel: "content", username: "TheFollowUp" }
 };
@@ -16,8 +17,9 @@ const sendDiscordMsg = async (appid: string, content: any) => {
     }
 
     const room = ROOMS[appid as keyof typeof ROOMS];
+    const channel = await CHANNELS.get(room.channel);
 
-    await fetch(`https://discordapp.com/api/webhooks/${CHANNELS[room.channel]}`, {
+    await fetch(`https://discordapp.com/api/webhooks/${channel}`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -36,7 +38,7 @@ export const onRequestPost: PagesFunction = async (ctx) => {
     }
 
     const { msg, appid } = await ctx.request.json();
-    CHANNELS = JSON.parse((ctx.env as any).HOOKS);
+    CHANNELS = (ctx.env as any).HOOKS;
 
     if (!!msg && !!appid) {
         try {

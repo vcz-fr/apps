@@ -2,7 +2,7 @@ const _q = id => (v = new URLSearchParams(window.location.search).get(id), v ===
 const _id = id => document.getElementById(id);
 const _r = msg => _id("response").value = msg;
 const _notif = msg => _r(`[INFO] Error: ${msg}`);
-const _block = disable => _id("action-send").disabled = disable
+const _block = disable => _id("action-send").disabled = disable;
 
 const send = body => {
     if (!body.appid || !body.msg) {
@@ -10,6 +10,7 @@ const send = body => {
         _block(false);
         return;
     }
+
     fetch(`/api/feedback`, {
         method: "POST",
         body: JSON.stringify(body),
@@ -22,18 +23,18 @@ const send = body => {
             _r("Thanks for your feedback!")
         })
         .catch(_notif)
-        .then(() => _block(false))
+        .then(() => _block(false));
 };
 
-const main = e => (
-    _block(true),
-    e.preventDefault(),
-    fd = new FormData(_id("form")),
-    send({ appid: fd.get("appid"), msg: fd.get("msg") })
-);
+const main = e => {
+    _block(true);
+    e.preventDefault();
+    const fd = new FormData(_id("form"));
+    send({ appid: fd.get("appid"), msg: fd.get("msg") });
+}
 
 const init = () => {
-    const appid = _q("appid")
+    const appid = _q("appid");
     if (appid !== null) {
         _id("appid").value = appid;
     }
