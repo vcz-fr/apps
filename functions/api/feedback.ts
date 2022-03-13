@@ -6,6 +6,7 @@ const ROOMS = {
     "crl4HX7hHtGc": { channel: "apps", username: "Feedback" },
     "jM85ke3GcMUb": { channel: "apps", username: "Unlink" },
     "pjlxtVSLuZ2x": { channel: "apps", username: "Anagram" },
+    "uF48VJ1fgo1s": { channel: "apps", username: "NSFW" },
     "DW7RbJ8FWHm5": { channel: "content", username: "Blog" },
     "hS7YejNaDu6k": { channel: "content", username: "TheFollowUp" }
 };

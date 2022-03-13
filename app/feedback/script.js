@@ -11,7 +11,7 @@ const send = body => {
         return;
     }
 
-    fetch(`/api/feedback`, {
+    fetch("/api/feedback", {
         method: "POST",
         body: JSON.stringify(body),
         headers: {

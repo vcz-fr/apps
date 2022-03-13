@@ -24,8 +24,8 @@
   icon: 💡
 
 - name: nsfw
-  url: "#"
-  text: NSFW proxy (soon)
+  url: /app/nsfw
+  text: NSFW proxy
   icon: 🙈
 
 - name: wed

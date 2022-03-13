@@ -9,7 +9,7 @@ const send = body => {
         _block(false);
         return;
     }
-    fetch(`/api/unlink`, {
+    fetch("/api/unlink", {
         method: "POST",
         body: JSON.stringify(body),
         headers: { "content-type": "application/json" }
