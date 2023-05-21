@@ -7,12 +7,13 @@ const ROOMS = {
     "jM85ke3GcMUb": { channel: "apps", username: "Unlink" },
     "pjlxtVSLuZ2x": { channel: "apps", username: "Anagram" },
     "uF48VJ1fgo1s": { channel: "apps", username: "NSFW" },
+    "ESc7Lj8VG4pH": { channel: "apps", username: "WED" },
     "DW7RbJ8FWHm5": { channel: "content", username: "Blog" },
     "hS7YejNaDu6k": { channel: "content", username: "TheFollowUp" }
 };
 
 // Send a message to a discord channel through a webhook
-const sendDiscordMsg = async (appid: string, content: any) => {
+async function sendDiscordMsg(appid: string, content: any) {
     if (!ROOMS.hasOwnProperty(appid)) {
         throw "This topic does not exist";
     }

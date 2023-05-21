@@ -14,8 +14,8 @@ one.
 
 There are two things to note, however:
 
-- Only the first 20 redirections will be reported. This is already an out of the ordinary amount ;
-- Some websites might not behave perfectly, like this one. See example below.
+- Only the first 20 redirections will be reported. This is by itself an outstanding amount;
+- Some websites might not behave perfectly. See example below.
 
 ### How it works
 

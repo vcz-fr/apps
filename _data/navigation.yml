@@ -29,6 +29,6 @@
   icon: 🙈
 
 - name: wed
-  url: "#"
-  text: Write Every Day (soon)
+  url: /app/wed
+  text: Write Every Day
   icon: ⌨️

@@ -30,23 +30,21 @@ export const onRequestPost: PagesFunction = async (ctx) => {
     });
 }
 
-const followRedirects = async (url: string, rec = 0): Promise<Array<{ url: string, status: number }>> => {
+async function followRedirects(url: string, rec = 0): Promise<Array<{ url: string, status: number }>> {
     if (rec > MAX_RECURSION) {
         return [];
     }
 
-    const currentResolution = await resolve((new URL(url)).href);
+    const currentResolution = await fetch((new URL(url)).href, { method: "HEAD", redirect: "manual" });
     const link = {
         url: currentResolution.url,
         status: currentResolution.status
     };
 
-    return isRedirect(currentResolution) ?
+    const isRedirect = [301, 302, 307, 308].includes(currentResolution.status) &&
+        currentResolution.headers.has("Location");
+
+    return isRedirect ?
         [link, ...await followRedirects(currentResolution.headers.get("Location"), rec + 1)] :
         [link];
 }
-
-const isRedirect = (response: Response) => [301, 302, 307, 308].includes(response.status) &&
-    response.headers.has("Location");
-
-const resolve = async (url: string) => await fetch(url, { method: "HEAD", redirect: "manual" });
