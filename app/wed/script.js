@@ -14,7 +14,7 @@ const openRequest = window.indexedDB.open("wed_db", 2);
 
 // Date stuff
 const now = new Date();
-const currentDate = `${now.getFullYear()}-${(now.getMonth() + 1).toString(10).padStart(2, "0")}-${now.getDate()}`;
+const currentDate = `${now.getFullYear()}-${(now.getMonth() + 1).toString(10).padStart(2, "0")}-${now.getDate().toString(10).padStart(2, "0")}`;
 _id("input-date").value = currentDate;
 
 openRequest.addEventListener("error", () => _notif("Database failed to open"));
